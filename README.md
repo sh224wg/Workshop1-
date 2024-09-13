@@ -1,0 +1,1 @@
+Program som kontrollerar primtal 
