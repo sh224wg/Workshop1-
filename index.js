@@ -12,6 +12,15 @@ function isPrime(number) {
     return true
 }
 
-for (let i = 1; i < 100; i++) {
-    console.log(`Is ${i} a prime number: ${isPrime(i)}`)
-}
+const button = document.querySelector('button')
+button.addEventListener('click', () => {
+    // Get number from input field
+    const input = document.getElementById('input')
+    let number = parseInt(input.value)
+
+    // Create new node with isPrime result and append to container
+    const paragraph = document.createElement('p')
+    paragraph.innerText = isPrime(number)
+    const container = document.querySelector('.container')
+    container.appendChild(paragraph)
+})
