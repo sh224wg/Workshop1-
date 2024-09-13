@@ -6,10 +6,12 @@ function isPrime(number) {
         return true
     }
     for (let i=2; i < number; i++) {
-        if ((number/i)%1 !== 0)
+        if (number % i === 0)
             return false
     }
     return true
 }
 
-console.log(isPrime(2))
+for (let i = 1; i < 100; i++) {
+    console.log(`Is ${i} a prime number: ${isPrime(i)}`)
+}
